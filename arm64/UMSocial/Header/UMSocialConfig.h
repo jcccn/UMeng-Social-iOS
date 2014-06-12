@@ -235,45 +235,43 @@ typedef void (^UMTableViewCellConfig)(UITableViewCell *cell,UMSViewControllerTyp
 
 /**
  设置是否支持新浪微博SSO，默认不支持
+ @param supportSinaSSO 设置是否支持新浪微博SSO
+ @param appRedirectUrl 设置授权回调地址，此授权回调地址必须和你在新浪应用后台填写的回调地址一致，否则不能授权
+        如果在新浪微博后台绑定我们的回调地址“http://sns.whalecloud.com/sina2/callback”，这里可以传nil
 
  */
-+ (void)setSupportSinaSSO:(BOOL)supportSinaSSO;
++ (void)setSupportSinaSSO:(BOOL)supportSinaSSO appRedirectUrl:(NSString *)appRedirectUrl;
 
 
-/**设置微信appId和图文分享用到的url地址
- 
- @param appId 微信AppId
- @param url   微信图文分享web类型，用到的url地址，如果传nil，默认使用http://www.umeng.com/social
- */
+/** deprecated API, Use ''[UMSocialQQHandler shareToQQWithAppId:@"100424468" url:@"http://www.umeng.com/social"];''
 
-+ (void)setWXAppId:(NSString *)appId url:(NSString *)url;
-
-
-/**设置手机QQ的appId和微信图文分享用到的url地址
+ 设置手机QQ的appId和微信图文分享用到的url地址
  
  @param appId 手机QQ的AppId
  @param url   手机QQ图文分享web类型，用到的url地址，如果传nil，默认使用http://www.umeng.com/social
- @param classes 载入手机QQ SDK，用到的两个类
+ @param classes 载入QQ互联 SDK，用到的两个类
  */
 
-+ (void)setQQAppId:(NSString *)appId url:(NSString *)url importClasses:(NSArray *)classes;
+//+ (void)setQQAppId:(NSString *)appId url:(NSString *)url importClasses:(NSArray *)classes;
 
 
-/**设置支持Qzone的SSO授权
+/**deprecated API, Use ''[UMSocialQQHandler setSupportQzoneSSO:YES];''
+ 设置支持Qzone的SSO授权
  
  @param supportQzoneSSO Qzone支持SSO
- @param classes 载入手机QQ SDK，用到的两个类
+ @param classes 载入QQ互联 SDK，用到的两个类
  */
 
-+ (void)setSupportQzoneSSO:(BOOL)supportQzoneSSO importClasses:(NSArray *)classes;
+//+ (void)setSupportQzoneSSO:(BOOL)supportQzoneSSO importClasses:(NSArray *)classes;
 
 
-/**设置是否使用QQ互联的SDK来分享
+/**deprecated API
+ 设置是否使用QQ互联的SDK来分享
  
  @param useQQSDK 是否使用QQ互联的SDK来分享
- @param classes 载入手机QQ SDK，用到的两个类
+ @param classes 载入QQ互联 SDK，用到的两个类
  */
 
-+ (void)setShareQzoneWithQQSDK:(BOOL)useQQSDK url:(NSString *)urlString importClasses:(NSArray *)classes;
+//+ (void)setShareQzoneWithQQSDK:(BOOL)useQQSDK url:(NSString *)urlString importClasses:(NSArray *)classes;
 
 @end
