@@ -274,6 +274,6 @@ typedef void (^UMTableViewCellConfig)(UITableViewCell *cell,UMSViewControllerTyp
  @param classes 载入手机QQ SDK，用到的两个类
  */
 
-+ (void)setShareQzoneWithQQSDK:(BOOL)useQQSDK importClasses:(NSArray *)classes;
++ (void)setShareQzoneWithQQSDK:(BOOL)useQQSDK url:(NSString *)urlString importClasses:(NSArray *)classes;
 
 @end

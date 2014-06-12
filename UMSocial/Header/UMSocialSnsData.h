@@ -231,6 +231,12 @@ typedef enum {
  */
 @property (nonatomic, copy) NSString * title;
 
+/** App文件数据，该数据发送给微信好友，微信好友需要点击后下载数据，微信终端会回传给第三方程序处理
+ * @attention 大小不能超过10M
+ 
+ */
+@property (nonatomic, retain) NSData   *fileData;
+
 /**
  微信消息类型，包括'UMSocialWXMessageTypeText'文字，'UMSocialWXMessageTypeImage'图片，'UMSocialWXMessageTypeApp'应用类型
  
