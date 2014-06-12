@@ -81,6 +81,14 @@ typedef enum {
                inViewController:(UIViewController *)controller
                        delegate:(id<UMSocialShakeDelegate>)delegate;
 
+/**
+ 设置响应摇一摇事件的阈值,数值越低越灵敏
+ 
+ @param threshold 摇一摇的阈值,默认是0.8
+ 
+ */
++(void)setShakeThreshold:(float)threshold;
+
 /*
  解除注册响应摇一摇事件
  

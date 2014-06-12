@@ -17,6 +17,7 @@
 <li>2.4 <a href="#social_shake_scrshot">摇一摇接口</a></li>
 <li>2.5 <a href="#social_scrshot">屏幕截图接口</a></li>
 <li>2.6 <a href="#social_scrshot_share">截图后分享</a></li>
+<li>2.7 <a href="#social_shake_config">摇一摇灵敏度设置</a></li>
 </ul>
 </li>
 <li>3.<a href="#support">技术支持</a>  </li>
@@ -190,6 +191,13 @@
 UMSocial_ScreenShot_Sdk文件夹添加到工程的中，示例如下:</p>
 <pre><code>    UIImage *image = [[UMSocialScreenShoterDefault screenShoter] getScreenShot];
     [UMSocialSnsService presentSnsIconSheetView:self appKey:UmengAppkey shareText:@&quot;分享文字&quot; shareImage:image shareToSnsNames:nil delegate:nil];
+</code></pre>
+
+<h2>2.7 摇一摇灵敏度设置   <b id=social_shake_config></b></h2>
+<pre><code>可根据应用类型灵活设置响应摇一摇事件的灵敏度,示例如下：
+</code></pre>
+<pre><code>    //可以设置响应摇一摇阈值，数值越低越灵敏，默认是0.8
+    [UMSocialShakeService setShakeThreshold:1.5];
 </code></pre>
 
 <h1>3 技术支持   <b id=support></b></h1>
