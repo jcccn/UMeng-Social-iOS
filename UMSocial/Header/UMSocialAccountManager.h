@@ -57,6 +57,11 @@
 @property (nonatomic, copy) NSString *openId;
 
 /**
+ qq空间授权的过期时间
+ */
+@property (nonatomic, retain) NSDate *expirationDate;
+
+/**
  初始化方法
  
  @param platformName 微博平台名

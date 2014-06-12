@@ -267,4 +267,13 @@ typedef void (^UMTableViewCellConfig)(UITableViewCell *cell,UMSViewControllerTyp
 
 + (void)setSupportQzoneSSO:(BOOL)supportQzoneSSO importClasses:(NSArray *)classes;
 
+
+/**设置是否使用QQ互联的SDK来分享
+ 
+ @param useQQSDK 是否使用QQ互联的SDK来分享
+ @param classes 载入手机QQ SDK，用到的两个类
+ */
+
++ (void)setShareQzoneWithQQSDK:(BOOL)useQQSDK importClasses:(NSArray *)classes;
+
 @end

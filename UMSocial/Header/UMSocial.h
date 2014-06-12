@@ -18,6 +18,3 @@
 #import "UMSocialSnsData.h"                     //区分不同平台设置不同分享内容
 
 #import "WXApi.h"                               //微信SDK
-
-#import <TencentOpenAPI/QQApiInterface.h>       //手机QQ SDk
-#import <TencentOpenAPI/TencentOAuth.h>

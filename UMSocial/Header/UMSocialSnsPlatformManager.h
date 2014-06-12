@@ -107,7 +107,11 @@ typedef enum {
     UMSocialSnsTypeWechatTimeline = 18,
     UMSocialSnsTypeMobileQQ = 19,
     UMSocialSnsTypeFacebook = 20,
-    UMSocialSnsTypeTwitter = 21
+    UMSocialSnsTypeTwitter = 21,
+    UMSocialSnsTypeYiXinSession = 22,
+    UMSocialSnsTypeYiXinTimeline = 23,
+    UMSocialSnsTypeLaiWangSession = 24,
+    UMSocialSnsTypeLaiWangTimeline = 25
 } UMSocialSnsType;
 
 

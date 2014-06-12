@@ -120,3 +120,7 @@
 "facebook" = "Facebook";
 "twitter" = "Twitter";
 "mobile_qq" = "QQ";
+"yx_session" = "易信";
+"yx_timeline" = "易信朋友圈";
+"lw_session" = "来往";
+"lw_timeline" = "来往动态";

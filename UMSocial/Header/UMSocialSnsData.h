@@ -242,7 +242,7 @@ typedef enum {
  微信网页消息url
  
  */
-@property (nonatomic, copy) NSString * webUrl;
+@property (nonatomic, copy) NSString * url;
 
 @end
 
