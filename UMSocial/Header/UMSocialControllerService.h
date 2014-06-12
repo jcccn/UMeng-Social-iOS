@@ -49,15 +49,6 @@
  */
 -(BOOL)closeOauthWebViewController:(UINavigationController *)navigationCtroller socialControllerService:(UMSocialControllerService *)socialControllerService;
 
-///**
-// 关闭当前页面之前
-// 
-// @param fromViewControllerType 关闭的页面类型
-// 
-// */
-//-(void)willCloseUIViewController:(UMSViewControllerType)fromViewControllerType;
-
-
 /**
  关闭当前页面之后
  
@@ -93,6 +84,14 @@
  */
 -(void)didSelectSocialPlatform:(NSString *)platformName withSocialData:(UMSocialData *)socialData;
 
+
+/**
+ 配置点击分享列表后是否弹出分享内容编辑页面，再弹出分享，默认需要弹出分享编辑页面
+ 
+ @result 设置是否需要弹出分享内容编辑页面，默认需要
+ 
+ */
+-(BOOL)isDirectShareInIconActionSheet;
 @end
 
 

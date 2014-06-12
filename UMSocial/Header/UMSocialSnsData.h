@@ -368,6 +368,13 @@ typedef enum {
 
 @end
 
+/**
+ 分享到Instagram
+ */
+@interface UMSocialInstagramData : UMSocialSnsData
+
+@end
+
 ///---------------------------------------------------------------------------------------
 
 /**
@@ -468,6 +475,11 @@ typedef enum {
  来往朋友圈
  */
 @property (nonatomic, retain) UMSocialLWTimelineData * lwtimelineData;
+
+/**
+ instagram
+ */
+@property (nonatomic, retain) UMSocialInstagramData * instagramData;
 
 /**
  标题，用于指定微信分享标题，qzone分享的标题和邮件分享的标题。

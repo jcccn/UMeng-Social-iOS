@@ -91,6 +91,11 @@ extern NSString *const UMShareToLWSession;
 extern NSString *const UMShareToLWTimeline;
 
 /**
+ 分享到Instragram
+ */
+extern NSString *const UMShareToInstagram;
+
+/**
  分享平台
  
  */
@@ -111,7 +116,8 @@ typedef enum {
     UMSocialSnsTypeYiXinSession = 22,
     UMSocialSnsTypeYiXinTimeline = 23,
     UMSocialSnsTypeLaiWangSession = 24,
-    UMSocialSnsTypeLaiWangTimeline = 25
+    UMSocialSnsTypeLaiWangTimeline = 25,
+    UMSocialSnsTypeInstagram = 26
 } UMSocialSnsType;
 
 

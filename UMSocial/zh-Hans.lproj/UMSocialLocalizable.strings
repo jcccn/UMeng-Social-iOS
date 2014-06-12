@@ -27,6 +27,8 @@
 "shareQQ_notInstall" = "手机QQ没有被安装在你的设备";
 "shareQQ_openFail" = "打开手机QQ失败";
 
+"shareInstagram_openFail" = "没有安装Instagram客户端";
+
 "shareList_title" = "分享到";
 "shareEdit_title" = "分享到";
 "shareEdit_post" = "发布";
@@ -124,3 +126,4 @@
 "yx_timeline" = "易信朋友圈";
 "lw_session" = "来往";
 "lw_timeline" = "来往动态";
+"instagram" = "Instagram";
