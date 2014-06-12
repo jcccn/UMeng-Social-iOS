@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 typedef enum{
     UMSNumberLike=0,            //喜欢
@@ -162,16 +163,10 @@ typedef enum {
 
 
 /**
- 分享到QQ空间数据
+ 分享到QQ空间数据，分享到QQ空间不支持纯图片的消息格式
  
  */
 @interface UMSocialQzoneData : UMSocialSnsData
-
-/**
- 设置用于分享视频到QQ空间所显示的封面图片
- 
- */
-@property (nonatomic, copy) NSString *thumbUrl;
 
 /**
  分享内容标题
@@ -180,16 +175,36 @@ typedef enum {
 @property (nonatomic, copy) NSString *title;
 
 /**
- 应用名称
- 
- */
-@property (nonatomic, copy) NSString *appName;
-
-/**
  应用链接地址
  
  */
 @property (nonatomic, copy) NSString *url;
+
+@end
+
+/**
+ 分享到QQ好友
+ 
+ */
+@interface UMSocialQQData : UMSocialSnsData
+
+/**
+ 分享到QQ好友的网页消息url
+ 
+ */
+@property (nonatomic, copy) NSString *url;
+
+/**
+ 分享到QQ好友的网页消息标题
+ 
+ */
+@property (nonatomic, copy) NSString *title;
+
+/**
+ 分享到QQ好友的消息类型
+ 
+ */
+@property (nonatomic, assign) UMSocialQQMessageType qqMessageType;
 
 @end
 
@@ -226,7 +241,7 @@ typedef enum {
 /** 第三方程序自定义简单数据，微信终端会回传给第三方程序处理
  * @attention 长度不能超过2K
  */
-@property (nonatomic, retain) NSString *extInfo;
+@property (nonatomic, copy) NSString *extInfo;
 
 @end
 
@@ -255,6 +270,10 @@ typedef enum {
  */
 @property (nonatomic, assign) UMSocialWXMessageType wxMessageType;
 
+/** 第三方程序自定义简单数据，微信终端会回传给第三方程序处理
+ * @attention 长度不能超过2K
+ */
+@property (nonatomic, copy) NSString *extInfo;
 
 /**
  微信网页消息url
@@ -289,38 +308,16 @@ typedef enum {
  */
 @property (nonatomic, assign) UMSocialWXMessageType wxMessageType;
 
+/** 第三方程序自定义简单数据，微信终端会回传给第三方程序处理
+ * @attention 长度不能超过2K
+ */
+@property (nonatomic, copy) NSString *extInfo;
 
 /**
  微信网页消息url
  
  */
 @property (nonatomic, copy) NSString * url;
-
-@end
-
-/**
- 分享到QQ好友
- 
- */
-@interface UMSocialQQData : UMSocialSnsData
-
-/**
- 分享到QQ好友的网页消息url
- 
- */
-@property (nonatomic, copy) NSString *webUrl;
-
-/**
- 分享到QQ好友的网页消息标题
- 
- */
-@property (nonatomic, copy) NSString *title;
-
-/**
- 分享到QQ好友的消息类型
- 
- */
-@property (nonatomic, assign) UMSocialQQMessageType qqMessageType;
 
 @end
 
