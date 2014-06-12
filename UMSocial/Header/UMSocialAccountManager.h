@@ -57,7 +57,7 @@
 @property (nonatomic, copy) NSString *openId;
 
 /**
- qq空间授权的过期时间
+ 授权的过期时间
  */
 @property (nonatomic, retain) NSDate *expirationDate;
 
@@ -204,11 +204,18 @@ extern NSString *const UMSCustomAccountGenderFeMale;
 + (BOOL)isLoginWithSnsAccount;
 
 /**
- 判断是否授权此sns平台。
+ 判断是否授权此sns平台,此方法不包含授权过期的情况，如果要在分享前判断是否授权并且token没有过期，需要用`isOauthAndTokenNotExpired`方法
  
  @param platformType sns平台名，定义在`UMSocialSnsPlatformManager.h`
  */
 + (BOOL)isOauthWithPlatform:(NSString *)platformType;
+
+/**
+ 判断此平台是否授权，并且token没有过期
+ 
+ @param platformType sns平台名，定义在`UMSocialSnsPlatformManager.h`
+ */
++(BOOL)isOauthAndTokenNotExpired:(NSString *)platformType;
 
 /**
  判断是否以游客身份登录。游客身份的过程是用户进入登录页面，并且选以游客身份登录，如果用户选择其他平台登录或者没有进入登录页面都是非游客身份登录。

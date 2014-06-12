@@ -161,11 +161,11 @@
  
  @param shareText 分享内嵌文字
  
- @param shareImage 分享内嵌图片
+ @param shareImage 分享内嵌图片,可以传入UIImage或者NSData类型
  
  @param socialUIDelegate 分享回调对象
  */
-- (void)setShareText:(NSString *)shareText shareImage:(UIImage *)shareImage
+- (void)setShareText:(NSString *)shareText shareImage:(id)shareImage
     socialUIDelegate:(id<UMSocialUIDelegate>)socialUIDelegate;
 
 ///---------------------------------------

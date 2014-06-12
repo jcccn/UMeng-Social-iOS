@@ -26,15 +26,25 @@
 
 /**
  处理app的URL方法
+ 若除了 UMSocial SDK外，还需要处理其他url，可以针对url的前缀作处理，例如下面写法：
  
- 如果你要处理自己的url，你可以把这个方法的实现，复制到你的代码中：
+ if ([url.description hasPrefix:@"xxxx"]) {
+    //你的处理逻辑
+ }
+ else {
+    return [UMSocialSnsService handleOpenURL:url];
+ }
  
- if ([url.description hasPrefix:@"sina"]) {
-    return (BOOL)[[UMSocialSnsService sharedInstance] performSelector:@selector(handleSinaSsoOpenURL:) withObject:url];
- }
- else if([url.description hasPrefix:@"wx"]){
-    return [WXApi handleOpenURL:url delegate:(id <WXApiDelegate>)[UMSocialSnsService sharedInstance]];
- }
+ @param url 传入的url
+ 
+ */
++(BOOL)handleOpenURL:(NSURL *)url;
+
+/**
+ 
+ Deprecated API
+ 
+ 处理app的URL方法
  
  @param url 传入的url
  
@@ -52,14 +62,14 @@
  @param controller 在该controller弹出分享列表的UIActionSheet
  @param appKey 友盟appKey
  @param shareText  分享编辑页面的内嵌文字
- @param shareImage 分享内嵌图片,用户可以在编辑页面删除
+ @param shareImage 可以传入`UIImage`，或者`NSData`类型，分享内嵌图片,用户可以在编辑页面删除
  @param snsNames 你要分享到的sns平台类型，该NSArray值是`UMSocialSnsPlatformManager.h`定义的平台名的字符串常量，有UMShareToSina，UMShareToTencent，UMShareToRenren，UMShareToDouban，UMShareToQzone，UMShareToEmail，UMShareToSms等
  @param delegate 实现分享完成后的回调对象，如果不关注分享完成的状态，可以设为nil
  */
 +(void)presentSnsController:(UIViewController *)controller
                      appKey:(NSString *)appKey
                   shareText:(NSString *)shareText
-                 shareImage:(UIImage *)shareImage
+                 shareImage:(id)shareImage
             shareToSnsNames:(NSArray *)snsNames
                    delegate:(id <UMSocialUIDelegate>)delegate;
 
@@ -76,7 +86,7 @@
 +(void)presentSnsIconSheetView:(UIViewController *)controller
                         appKey:(NSString *)appKey
                      shareText:(NSString *)shareText
-                    shareImage:(UIImage *)shareImage
+                    shareImage:(id)shareImage
                shareToSnsNames:(NSArray *)snsNames
                       delegate:(id <UMSocialUIDelegate>)delegate;
 

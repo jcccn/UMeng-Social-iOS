@@ -72,6 +72,7 @@ typedef enum{
     UMSocialWXMessageTypeWeb,       //微信消息网页类型
     UMSocialWXMessageTypeMusic,     //微信消息音乐类型
     UMSocialWXMessageTypeVideo,     //微信消息视频类型
+    UMSocialWXMessageTypeEmotion,   //微信消息表情类型
     UMSocialWXMessageTypeOther      //微信消息其他多媒体类型
 }UMSocialWXMessageType;
 
@@ -120,7 +121,7 @@ typedef enum {
  分享图片
  
  */
-@property (nonatomic, retain) UIImage *shareImage;
+@property (nonatomic, retain) id shareImage;
 
 /**
  url资源类型
@@ -395,6 +396,12 @@ typedef enum {
  */
 @property (nonatomic, assign) UMSocialYXMessageType yxMessageType;
 
+/**
+ 分享网页消息的链接地址
+ 
+ */
+@property (nonatomic, copy) NSString *url;
+
 @end
 
 /**
@@ -407,6 +414,12 @@ typedef enum {
  */
 @property (nonatomic, assign) UMSocialYXMessageType yxMessageType;
 
+/**
+ 分享网页消息的链接地址
+ 
+ */
+@property (nonatomic, copy) NSString *url;
+
 @end
 
 /**
@@ -414,12 +427,24 @@ typedef enum {
  */
 @interface UMSocialLWSessionData : UMSocialSnsData
 
+/**
+ 分享网页消息的链接地址
+ 
+ */
+@property (nonatomic, copy) NSString *url;
+
 @end
 
 /**
  分享到来往好友
  */
 @interface UMSocialLWTimelineData : UMSocialSnsData
+
+/**
+ 分享网页消息的链接地址
+ 
+ */
+@property (nonatomic, copy) NSString *url;
 
 @end
 

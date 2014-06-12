@@ -17,6 +17,7 @@ typedef enum {
     UMSREsponseCodeTokenInvalid       = 400,        //授权用户token错误
     UMSResponseCodeBaned              = 505,        //用户被封禁
     UMSResponseCodeFaild              = 510,        //发送失败（由于内容不符合要求或者其他原因）
+    UMSResponseCodeArgumentsError     = 522,        //参数错误,提供的参数不符合要求
     UMSResponseCodeEmptyContent       = 5007,       //发送内容为空
     UMSResponseCodeShareRepeated      = 5016,       //分享内容重复
     UMSResponseCodeGetNoUidFromOauth  = 5020,       //授权之后没有得到用户uid
@@ -24,6 +25,7 @@ typedef enum {
     UMSResponseCodeNetworkError       = 5050,       //网络错误
     UMSResponseCodeGetProfileFailed   = 5051,       //获取账户失败
     UMSResponseCodeCancel             = 5052,        //用户取消授权
+    UMSResponseCodeNotLogin           = 5053,       //用户没有登录
     UMSResponseCodeNoApiAuthority     = 100031      //QQ空间应用没有在QQ互联平台上申请上传图片到相册的权限
 } UMSResponseCode;
 
@@ -49,7 +51,8 @@ typedef enum {
     UMSResponseAddCustomAccount       = 14,         //添加自定义账户
     UMSResponseAddSnsAccount          = 15,         //添加已经授权的账户
     UMSResponseGetAppInfo             = 16,         //获取各个sns绑定app 信息
-    UMSResponseAnalytics              = 17
+    UMSResponseIsTokenValid           = 17,         //获取各个微博平台的token是否有效
+    UMSResponseAnalytics              = 18
 } UMSResponse;
 
 /**
@@ -203,6 +206,7 @@ typedef void (^UMSocialDataServiceCompletion)(UMSocialResponseEntity * response)
 -(void)requestSocialDataWithCompletion:(UMSocialDataServiceCompletion)completion;
 
 /**
+ Deprecated APIs
  发送微博内容到多个微博平台
  
  @param platformTypes       分享到的平台，数组的元素是`UMSocialSnsPlatformManager.h`定义的平台名的常量字符串，例如`UMShareToSina`，`UMShareToTencent`等。
@@ -215,7 +219,7 @@ typedef void (^UMSocialDataServiceCompletion)(UMSocialResponseEntity * response)
  */
 - (void)postSNSWithTypes:(NSArray *)platformTypes
                  content:(NSString *)content
-                   image:(UIImage *)image
+                   image:(id)image
                 location:(CLLocation *)location
              urlResource:(UMSocialUrlResource *)urlResource
               completion:(UMSocialDataServiceCompletion)completion;
@@ -225,7 +229,7 @@ typedef void (^UMSocialDataServiceCompletion)(UMSocialResponseEntity * response)
 
     @param platformTypes    分享到的平台，数组的元素是`UMSocialSnsPlatformManager.h`定义的平台名的常量字符串，例如`UMShareToSina`，`UMShareToTencent`等。
     @param content          分享的文字内容
-    @param image            分享的图片
+    @param image            分享的图片,可以传入UIImage类型或者NSData类型
     @param location         分享的地理位置信息
     @param urlResource      图片、音乐、视频等url资源
     @param completion       发送完成执行的block对象
@@ -234,7 +238,7 @@ typedef void (^UMSocialDataServiceCompletion)(UMSocialResponseEntity * response)
  */
 - (void)postSNSWithTypes:(NSArray *)platformTypes
                  content:(NSString *)content
-                   image:(UIImage *)image
+                   image:(id)image
                 location:(CLLocation *)location
              urlResource:(UMSocialUrlResource *)urlResource
      presentedController:(UIViewController *)presentedController
@@ -350,5 +354,13 @@ typedef void (^UMSocialDataServiceCompletion)(UMSocialResponseEntity * response)
  */
 - (void)requestAddFollow:(NSString *)platformType followedUsid:(NSArray *)usids completion:(UMSocialDataServiceCompletion)completion;
 
+/**
+ 检测用户在各个开放平台上的token是否有效，失效的情况包括token过期，用户手动解除授权，用户修改密码等情况
+ 
+ @param snsArray 微博平台数组，只支持传入支持授权的平台，包括新浪微博、腾讯微博、QQ空间等。不支持微信等平台。
+ 
+ @return completion 返回结果
+ */
+- (void)requestIsTokenValid:(NSArray *)snsArray completion:(UMSocialDataServiceCompletion)completion;
 @end
 

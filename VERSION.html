@@ -7,174 +7,184 @@
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="1265.2">
   <style type="text/css">
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 12.0px 'Heiti SC Light'; color: #333333; background-color: #f5f5f5}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 12.0px Monaco; color: #333333; background-color: #f5f5f5}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 12.0px Monaco; color: #333333; background-color: #f5f5f5; min-height: 16.0px}
-    p.p6 {margin: 0.0px 0.0px 20.0px 0.0px; line-height: 20.0px; font: 14.0px Helvetica; color: #333333; background-color: #ffffff; min-height: 17.0px}
-    p.p7 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 20.0px; font: 14.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 12.0px Monaco; color: #008800; background-color: #f5f5f5}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 12.0px 'Heiti SC Light'; color: #333333; background-color: #f5f5f5}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 12.0px Monaco; color: #333333; background-color: #f5f5f5}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.0px; font: 12.0px Monaco; color: #333333; background-color: #f5f5f5; min-height: 16.0px}
+    p.p7 {margin: 0.0px 0.0px 20.0px 0.0px; line-height: 20.0px; font: 14.0px Helvetica; color: #333333; background-color: #ffffff; min-height: 17.0px}
+    p.p8 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 20.0px; font: 14.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff}
     span.s1 {font: 15.0px 'Heiti SC Light'}
-    span.s2 {font: 12.0px Monaco}
-    span.s3 {font: 12.0px 'Heiti SC Light'}
-    span.s4 {font: 14.0px Helvetica}
-    span.s5 {font: 12.0px Monaco; color: #1c00cf}
-    span.s6 {font: 15.0px Helvetica}
+    span.s2 {color: #333333}
+    span.s3 {font: 12.0px 'Heiti SC Light'; color: #333333}
+    span.s4 {color: #000000}
+    span.s5 {font: 12.0px Monaco}
+    span.s6 {font: 12.0px 'Heiti SC Light'}
+    span.s7 {font: 14.0px Helvetica}
+    span.s8 {font: 12.0px Monaco; color: #1c00cf}
+    span.s9 {font: 15.0px Helvetica}
   </style>
 </head>
 <body>
+<h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>版本</b></span><b> 3.3.8</b></h4>
+<h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>发布日期：</b></span><b> 2014-05-20</b></h4>
+<h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>更新：</b></h4>
+<p class="p3"><span class="s2">1.</span><span class="s3">增加非实时检测各个平台的</span><span class="s4">Token</span><span class="s3">是否有效的方法</span><span class="s2">(</span>[UMSocialAccountManager isOauthAndTokenNotExpired:UMShareToXXX]<span class="s2">;)</span></p>
+<p class="p3"><span class="s2">2.</span><span class="s3">增加实时检测各个平台是否授权并且</span><span class="s4">Token</span><span class="s3">没有过期的方法</span><span class="s2">(</span>[[UMSocialDataService defaultDataService]<span class="s2"> </span><span class="s4">requestIsTokenValid</span><span class="s2">:...];)</span></p>
+<p class="p4"><span class="s5">3.</span>分享时增加支持本地<span class="s5">GIF</span>图片</p>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>版本</b></span><b> 3.3.7.1</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>发布日期：</b></span><b> 2014-05-14</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>更新：</b></h4>
-<p class="p3"><span class="s2">1. </span>解决新浪微博<span class="s2">SSO</span>授权时验证本地设置的回调地址和后台设置回调地址不一致的问题。</p>
+<p class="p4"><span class="s5">1. </span>解决新浪微博<span class="s5">SSO</span>授权时验证本地设置的回调地址和后台设置回调地址不一致的问题。</p>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>版本</b></span><b> 3.3.7</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>发布日期：</b></span><b> 2014-04-11</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>更新：</b></h4>
-<p class="p3"><span class="s2">1. </span>把分享到<span class="s2">QQ</span>和<span class="s2">QQ</span>好友的功能分离成独立的库文件。</p>
-<p class="p3"><span class="s2">2. </span>分享到<span class="s2">QQ</span>空间使用新的分享接口，修复使用旧接口不能显示在动态的问题。</p>
+<p class="p4"><span class="s5">1. </span>把分享到<span class="s5">QQ</span>和<span class="s5">QQ</span>好友的功能分离成独立的库文件。</p>
+<p class="p4"><span class="s5">2. </span>分享到<span class="s5">QQ</span>空间使用新的分享接口，修复使用旧接口不能显示在动态的问题。</p>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>版本</b></span><b> 3.3.6</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>发布日期：</b></span><b> 2014-3-12</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>更新：</b></h4>
-<p class="p3"><span class="s2">1. </span>优化<span class="s2">Instagram</span>分享，增加设置正方形图片的底色接口</p>
-<p class="p3"><span class="s2">2. </span>优化微信分享</p>
+<p class="p4"><span class="s5">1. </span>优化<span class="s5">Instagram</span>分享，增加设置正方形图片的底色接口</p>
+<p class="p4"><span class="s5">2. </span>优化微信分享</p>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>版本</b></span><b> 3.3.5</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>发布日期：</b></span><b> 2014-3-3</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>更新：</b></h4>
-<p class="p3"><span class="s2">1. </span>增加微信收藏功能</p>
-<p class="p3"><span class="s2">2. </span>支持<span class="s2">64</span>位版本<span class="s2">SDK(</span>不支持微信、手机<span class="s2">QQ</span>、来往、易信<span class="s2">)</span></p>
-<p class="p4">3. <span class="s3">去除</span>idfa<span class="s3">，避免被</span>appstore<span class="s3">拒绝</span></p>
+<p class="p4"><span class="s5">1. </span>增加微信收藏功能</p>
+<p class="p4"><span class="s5">2. </span>支持<span class="s5">64</span>位版本<span class="s5">SDK(</span>不支持微信、手机<span class="s5">QQ</span>、来往、易信<span class="s5">)</span></p>
+<p class="p5">3. <span class="s6">去除</span>idfa<span class="s6">，避免被</span>appstore<span class="s6">拒绝</span></p>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>版本</b></span><b> 3.3.4</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>发布日期：</b></span><b> 2014-1-21</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>更新：</b></h4>
-<p class="p3"><span class="s2">1. </span>来往支持分享本地图片<span class="s2"><span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><br></p>
+<p class="p4"><span class="s5">1. </span>来往支持分享本地图片<span class="s5"><span class="Apple-converted-space"> </span></span></p>
+<p class="p6"><br></p>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>版本</b></span><b> 3.3.3</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>发布日期：</b></span><b> 2014-1-15</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>更新：</b></h4>
-<p class="p3"><span class="s2">1. </span>增加<span class="s2">Twitter</span>底层分享接口（无<span class="s2">Twitter</span>客户端也能分享）</p>
-<p class="p3"><span class="s2">2. </span>分享到<span class="s2">Qzone</span>初始化方法增加设置分享<span class="s2">url</span>（非友盟公用账号）</p>
-<p class="p3"><span class="s2">3. </span>来往、易信支持设置分享标题</p>
+<p class="p4"><span class="s5">1. </span>增加<span class="s5">Twitter</span>底层分享接口（无<span class="s5">Twitter</span>客户端也能分享）</p>
+<p class="p4"><span class="s5">2. </span>分享到<span class="s5">Qzone</span>初始化方法增加设置分享<span class="s5">url</span>（非友盟公用账号）</p>
+<p class="p4"><span class="s5">3. </span>来往、易信支持设置分享标题</p>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>版本</b></span><b> 3.3.2</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>发布日期：</b></span><b> 2014-1-9</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>更新：</b></h4>
-<p class="p4">1. <span class="s3">增加分享到</span>Instagram<span class="s3">平台。</span></p>
-<p class="p3"><span class="s2">2. </span>分享面板页面增加开关，点击各平台直接分享。</p>
-<p class="p3"><span class="s2">3. </span>支持模块化按需下载<span class="s2">SDK</span>。</p>
+<p class="p5">1. <span class="s6">增加分享到</span>Instagram<span class="s6">平台。</span></p>
+<p class="p4"><span class="s5">2. </span>分享面板页面增加开关，点击各平台直接分享。</p>
+<p class="p4"><span class="s5">3. </span>支持模块化按需下载<span class="s5">SDK</span>。</p>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>版本</b></span><b> 3.3.1</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>发布日期：</b></span><b> 2014-1-6</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>更新：</b></h4>
-<p class="p4">1. <span class="s3">增加集成</span>Facebook Webview<span class="s3">分享方式（无</span>Facebook<span class="s3">客户端依然可分享）</span></p>
-<p class="p3"><span class="s2">2. </span>更新新版分享到<span class="s2">QQ</span>空间的接口</p>
-<p class="p3"><span class="s2">3. </span>优化<span class="s2">SDK</span>包，将可选文件夹提取到<span class="s2">SDK</span>核心目录外</p>
+<p class="p5">1. <span class="s6">增加集成</span>Facebook Webview<span class="s6">分享方式（无</span>Facebook<span class="s6">客户端依然可分享）</span></p>
+<p class="p4"><span class="s5">2. </span>更新新版分享到<span class="s5">QQ</span>空间的接口</p>
+<p class="p4"><span class="s5">3. </span>优化<span class="s5">SDK</span>包，将可选文件夹提取到<span class="s5">SDK</span>核心目录外</p>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>版本</b></span><b> 3.3</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>发布日期：</b></span><b> 2013-12-26</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>更新：</b></h4>
-<p class="p3"><span class="s2">1. </span>支持分享到来往</p>
-<p class="p3"><span class="s2">2. </span>支持分享到易信</p>
+<p class="p4"><span class="s5">1. </span>支持分享到来往</p>
+<p class="p4"><span class="s5">2. </span>支持分享到易信</p>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>版本</b></span><b> 3.2</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>发布日期：</b></span><b> 2013-12-13</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>更新：</b></h4>
-<p class="p3"><span class="s2">1. </span>增加摇一摇、截屏后分享</p>
-<p class="p3"><span class="s2">2. </span>增加<span class="s2">SSO</span>授权之后关注官方微博</p>
-<p class="p3"><span class="s2">3. </span>支持为不同分享平台设置不同分享内容</p>
-<p class="p3"><span class="s2">4. </span>统一各个平台（包括微信和手机<span class="s2">QQ</span>）分享音乐和视频的方法</p>
-<p class="p6"><br></p>
+<p class="p4"><span class="s5">1. </span>增加摇一摇、截屏后分享</p>
+<p class="p4"><span class="s5">2. </span>增加<span class="s5">SSO</span>授权之后关注官方微博</p>
+<p class="p4"><span class="s5">3. </span>支持为不同分享平台设置不同分享内容</p>
+<p class="p4"><span class="s5">4. </span>统一各个平台（包括微信和手机<span class="s5">QQ</span>）分享音乐和视频的方法</p>
+<p class="p7"><br></p>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>版本</b></span><b> 3.1</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>发布日期：</b></span><b> 2013-10-10</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>更新：</b></h4>
-<p class="p3">对数据进行加密，增加安全性</p>
-<p class="p6"><br></p>
+<p class="p4">对数据进行加密，增加安全性</p>
+<p class="p7"><br></p>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>版本</b></span><b> 3.0</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>发布日期：</b></span><b> 2013-9-12</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>更新：</b></h4>
-<p class="p3"><span class="s2">1. </span>增加分享到手机<span class="s2">QQ</span></p>
-<p class="p4">2. <span class="s3">增加</span>QQ<span class="s3">空间的</span>SSO<span class="s3">授权</span></p>
-<p class="p3"><span class="s2">3. </span>增加腾讯微博的<span class="s2">SSO</span>授权</p>
-<p class="p4">4. <span class="s3">兼容</span>iOS7</p>
+<p class="p4"><span class="s5">1. </span>增加分享到手机<span class="s5">QQ</span></p>
+<p class="p5">2. <span class="s6">增加</span>QQ<span class="s6">空间的</span>SSO<span class="s6">授权</span></p>
+<p class="p4"><span class="s5">3. </span>增加腾讯微博的<span class="s5">SSO</span>授权</p>
+<p class="p5">4. <span class="s6">兼容</span>iOS7</p>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>优化：</b></h4>
-<p class="p3"><span class="s2">1. </span>新增微信注册方法</p>
-<p class="p3"><span class="s2">2. </span>修改分享列表页面，增加分享平台文字</p>
-<p class="p3"><span class="s2">3. </span>修改等待提示样式</p>
-<p class="p3"><span class="s2">4. </span>增加短信、邮箱等平台的回调事件</p>
-<p class="p3"><span class="s2">5. </span>增加所有平台的授权和分享取消事件的回调</p>
-<p class="p4">6. <span class="s3">修改分享</span>url<span class="s3">资源</span></p>
-<p class="p3"><span class="s2">7. </span>修改微信统计，发送分享文字</p>
-<p class="p3"><span class="s2">8. </span>修改授权信息页面布局</p>
-<p class="p6"><br></p>
+<p class="p4"><span class="s5">1. </span>新增微信注册方法</p>
+<p class="p4"><span class="s5">2. </span>修改分享列表页面，增加分享平台文字</p>
+<p class="p4"><span class="s5">3. </span>修改等待提示样式</p>
+<p class="p4"><span class="s5">4. </span>增加短信、邮箱等平台的回调事件</p>
+<p class="p4"><span class="s5">5. </span>增加所有平台的授权和分享取消事件的回调</p>
+<p class="p5">6. <span class="s6">修改分享</span>url<span class="s6">资源</span></p>
+<p class="p4"><span class="s5">7. </span>修改微信统计，发送分享文字</p>
+<p class="p4"><span class="s5">8. </span>修改授权信息页面布局</p>
+<p class="p7"><br></p>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>版本</b></span><b> 2.2.1.1</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>发布日期：</b></span><b> 2013-7-30</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>更新：</b></h4>
-<p class="p3"><span class="s2">1. </span>修改分享列表界面，增加自适应横竖屏功能</p>
-<p class="p3"><span class="s2">2. </span>修改分享完成失败提示，如果授权过期取消授权</p>
-<p class="p4">3. <span class="s3">增加兼容之前的</span>xcode url scheme<span class="s3">设置方法</span></p>
-<p class="p4">4. <span class="s3">去除代表微信变量</span>UMShareToWeChat<span class="s3">，用分享到微信好友</span>(UMShareToWechatSession)<span class="s3">和微信朋友圈</span>(UMShareToWechatTimeline)<span class="s3">代替分享到微信</span></p>
-<p class="p3"><span class="s2">5. </span>增加集成文档微信其他类型分享方法说明，增加分享设置横竖屏的提醒</p>
-<p class="p6"><br></p>
+<p class="p4"><span class="s5">1. </span>修改分享列表界面，增加自适应横竖屏功能</p>
+<p class="p4"><span class="s5">2. </span>修改分享完成失败提示，如果授权过期取消授权</p>
+<p class="p5">3. <span class="s6">增加兼容之前的</span>xcode url scheme<span class="s6">设置方法</span></p>
+<p class="p5">4. <span class="s6">去除代表微信变量</span>UMShareToWeChat<span class="s6">，用分享到微信好友</span>(UMShareToWechatSession)<span class="s6">和微信朋友圈</span>(UMShareToWechatTimeline)<span class="s6">代替分享到微信</span></p>
+<p class="p4"><span class="s5">5. </span>增加集成文档微信其他类型分享方法说明，增加分享设置横竖屏的提醒</p>
+<p class="p7"><br></p>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>版本</b></span><b> 2.2</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>发布日期：</b></span><b> 2013-7-10</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>主要更新：</b></h4>
-<p class="p4">1. <span class="s3">更新</span>UI<span class="s3">界面。</span></p>
-<p class="p3"><span class="s2">2. </span>支持多语言国际化。</p>
-<p class="p3"><span class="s2">3. </span>提供分享到微信朋友圈的单独图标，并完善回调方法。</p>
-<p class="p6"><br></p>
+<p class="p5">1. <span class="s6">更新</span>UI<span class="s6">界面。</span></p>
+<p class="p4"><span class="s5">2. </span>支持多语言国际化。</p>
+<p class="p4"><span class="s5">3. </span>提供分享到微信朋友圈的单独图标，并完善回调方法。</p>
+<p class="p7"><br></p>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>版本</b></span><b> 2.1</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>发布日期：</b></span><b> 2013-4-26</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>主要更新：</b></h4>
-<p class="p7">去除采集设备标识<span class="s4">udid</span>。</p>
-<p class="p6"><br></p>
+<p class="p8">去除采集设备标识<span class="s7">udid</span>。</p>
+<p class="p7"><br></p>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>版本</b></span><b> 2.0</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>发布日期：</b></span><b> 2013-4-11</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>主要更新：</b></h4>
-<p class="p7">各个分享微博的接口（包括列表页面、编辑页面、授权页面、个人中心页面）支持<b>新浪微博</b><span class="s4"><b>SSO</b></span><b>授权</b>，即如果有安装新浪微博客户端跳转到客户端授权，没有的话使用原来的方式。</p>
-<p class="p6"><br></p>
+<p class="p8">各个分享微博的接口（包括列表页面、编辑页面、授权页面、个人中心页面）支持<b>新浪微博</b><span class="s7"><b>SSO</b></span><b>授权</b>，即如果有安装新浪微博客户端跳转到客户端授权，没有的话使用原来的方式。</p>
+<p class="p7"><br></p>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>版本</b></span><b> 1.9</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>发布日期：</b></span><b>2013-4-1</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>主要更新：</b></h4>
-<p class="p3"><span class="s2">1. </span>分享编辑页面支持切换用户账户。</p>
-<p class="p3"><span class="s2">2. </span>微信分享支持应用分享。</p>
-<p class="p6"><br></p>
+<p class="p4"><span class="s5">1. </span>分享编辑页面支持切换用户账户。</p>
+<p class="p4"><span class="s5">2. </span>微信分享支持应用分享。</p>
+<p class="p7"><br></p>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>版本</b></span><b> 1.8</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>发布日期：</b></span><b>2013-3-8</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>主要更新：</b></h4>
-<p class="p3"><span class="s2">1. </span>支持分享<span class="s2">url</span>的图片、音乐、视频资源到各个微博平台。</p>
-<p class="p3"><span class="s2">2. </span>统计分享到微信、<span class="s2">Facebook</span>、<span class="s2">Twitter</span>、邮件、短信内容，可以在我们的网站报表看到对应的统计数据。</p>
-<p class="p6"><br></p>
+<p class="p4"><span class="s5">1. </span>支持分享<span class="s5">url</span>的图片、音乐、视频资源到各个微博平台。</p>
+<p class="p4"><span class="s5">2. </span>统计分享到微信、<span class="s5">Facebook</span>、<span class="s5">Twitter</span>、邮件、短信内容，可以在我们的网站报表看到对应的统计数据。</p>
+<p class="p7"><br></p>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>版本</b></span><b> 1.7</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>发布日期：</b></span><b>2013-2-4</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>主要更新：</b></h4>
-<p class="p3"><span class="s2">1. </span>提供快速分享接口，简化集成<span class="s2">SDK</span>步骤。</p>
-<p class="p3"><span class="s2">2. </span>提供分享列表新样式，原来的分享列表提供改为更为灵活的配置方法。</p>
-<p class="p3"><span class="s2">3. </span>优化个人中心和评论的登录逻辑。</p>
-<p class="p4">4. <span class="s3">用</span>iOS6<span class="s3">的系统框架实现</span>Facebook<span class="s3">和</span>Twitter<span class="s3">分享。</span></p>
-<p class="p6"><br></p>
+<p class="p4"><span class="s5">1. </span>提供快速分享接口，简化集成<span class="s5">SDK</span>步骤。</p>
+<p class="p4"><span class="s5">2. </span>提供分享列表新样式，原来的分享列表提供改为更为灵活的配置方法。</p>
+<p class="p4"><span class="s5">3. </span>优化个人中心和评论的登录逻辑。</p>
+<p class="p5">4. <span class="s6">用</span>iOS6<span class="s6">的系统框架实现</span>Facebook<span class="s6">和</span>Twitter<span class="s6">分享。</span></p>
+<p class="p7"><br></p>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>版本</b></span><b> 1.6</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>发布日期：</b></span><b>2013-1-5</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>主要更新：</b></h4>
-<p class="p3"><span class="s2">1. SDK</span>的库文件分拆为两个，如果没有用评论功能的话，只集成一个库文件，减少了库文件的大小。如果要使用评论功能则需要两个库文件。</p>
-<p class="p3"><span class="s2">2. </span>评论列表页面、分享列表页面、个人中心页面均可以配置是否需要登录。</p>
-<p class="p3"><span class="s2">3. </span>增加评论列表页的缓存。</p>
-<p class="p3"><span class="s2">4. </span>增加社会化操作栏的回调方法，公开操作栏视图文件的源代码，可以自定义按钮样式、响应事件等。</p>
-<p class="p6"><br></p>
+<p class="p4"><span class="s5">1. SDK</span>的库文件分拆为两个，如果没有用评论功能的话，只集成一个库文件，减少了库文件的大小。如果要使用评论功能则需要两个库文件。</p>
+<p class="p4"><span class="s5">2. </span>评论列表页面、分享列表页面、个人中心页面均可以配置是否需要登录。</p>
+<p class="p4"><span class="s5">3. </span>增加评论列表页的缓存。</p>
+<p class="p4"><span class="s5">4. </span>增加社会化操作栏的回调方法，公开操作栏视图文件的源代码，可以自定义按钮样式、响应事件等。</p>
+<p class="p7"><br></p>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>版本</b></span><b> 1.5</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>发布日期：</b></span><b>2012-12-4</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>主要更新：</b></h4>
-<p class="p4">1. <span class="s3">全部页面兼容</span>iPad<span class="s3">。</span></p>
-<p class="p3"><span class="s2">2. </span>授权页面增加关注官方微博，和关注好友的数据级接口。</p>
-<p class="p3"><span class="s2">3. </span>增加配置支持的屏幕方向<span class="s2">,</span>各个界面级回调方法，分享编辑页面删除图片。</p>
-<p class="p4">4. <span class="s3">修改</span>bug<span class="s3">。</span></p>
-<p class="p6"><br></p>
+<p class="p5">1. <span class="s6">全部页面兼容</span>iPad<span class="s6">。</span></p>
+<p class="p4"><span class="s5">2. </span>授权页面增加关注官方微博，和关注好友的数据级接口。</p>
+<p class="p4"><span class="s5">3. </span>增加配置支持的屏幕方向<span class="s5">,</span>各个界面级回调方法，分享编辑页面删除图片。</p>
+<p class="p5">4. <span class="s6">修改</span>bug<span class="s6">。</span></p>
+<p class="p7"><br></p>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>版本</b></span><b> 1.4</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>发布日期：</b></span><b> 2012-11-9</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>主要更新：</b></h4>
-<p class="p3"><span class="s2">1. </span>各个页面支持横屏。</p>
-<p class="p3"><span class="s2">2. </span>分享增加<span class="s2">@</span>好友的功能。</p>
-<p class="p3"><span class="s5">3</span><span class="s2">. </span>增加获取好友等数据级接口。</p>
-<p class="p6"><br></p>
+<p class="p4"><span class="s5">1. </span>各个页面支持横屏。</p>
+<p class="p4"><span class="s5">2. </span>分享增加<span class="s5">@</span>好友的功能。</p>
+<p class="p4"><span class="s8">3</span><span class="s5">. </span>增加获取好友等数据级接口。</p>
+<p class="p7"><br></p>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>版本</b></span><b> 1.3</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px Helvetica; color: #333333; background-color: #ffffff"><span class="s1"><b>发布日期：</b></span><b> 2012-10-18</b></h4>
 <h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>初始发布：</b></h4>
-<p class="p3">我们的组件式社会化服务，为用户提供简约、流畅的社会化分享、评论、登录体验，<span class="s2"> </span>并为<span class="s2">APP</span>轻松创建一个基于兴趣的互动社区<span class="s2"> </span>。</p>
-<h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>三大看点</b><span class="s6"><b>:</b></span></h4>
-<p class="p3"><span class="s2">1. </span>分享聚合<span class="s2">——</span>众多社交平台一站管理。<span class="s2"> <span class="Apple-converted-space"> </span></span></p>
-<p class="p3"><span class="s2">2. </span>轻松满足更多社会化需求<span class="s2">——</span>登录、评论、喜欢。<span class="s2"><span class="Apple-converted-space">   </span></span></p>
-<p class="p3"><span class="s2">3. </span>社会化效果统计报表。</p>
+<p class="p4">我们的组件式社会化服务，为用户提供简约、流畅的社会化分享、评论、登录体验，<span class="s5"> </span>并为<span class="s5">APP</span>轻松创建一个基于兴趣的互动社区<span class="s5"> </span>。</p>
+<h4 style="margin: 0.0px 0.0px 10.0px 0.0px; line-height: 15.0px; font: 15.0px 'Heiti SC Light'; color: #333333; background-color: #ffffff"><b>三大看点</b><span class="s9"><b>:</b></span></h4>
+<p class="p4"><span class="s5">1. </span>分享聚合<span class="s5">——</span>众多社交平台一站管理。<span class="s5"> <span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s5">2. </span>轻松满足更多社会化需求<span class="s5">——</span>登录、评论、喜欢。<span class="s5"><span class="Apple-converted-space">   </span></span></p>
+<p class="p4"><span class="s5">3. </span>社会化效果统计报表。</p>
 </body>
 </html>

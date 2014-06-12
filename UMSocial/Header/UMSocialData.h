@@ -45,10 +45,10 @@
 @property (nonatomic, copy) NSString * commentText;
 
 /**
- 分享的内嵌图片
+ 分享的内嵌图片,可以传入`UIImage`或者`NSData`类型
  
  */
-@property (nonatomic, retain) UIImage * shareImage;
+@property (nonatomic, retain) id shareImage;
 
 /**
  用于用户在评论并分享的时候，该字段内容会自动添加到评论中的图片，分享到各个分享平台
