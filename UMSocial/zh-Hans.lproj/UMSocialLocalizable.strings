@@ -59,7 +59,7 @@
 "share_wechat_no_title" = "温馨提示";
 "share_wechat_no_message" = "您的设备没有安装微信";
 "share_facebook_not_login" = "账号未登录";
-"share_facebook_not_login_message" = "Facebook账号未登录";
+"share_facebook_not_login_message" = "账号未登录";
 "share_facebook_no_osSupport" = "系统不支持";
 "share_facebook_no_osSupport_message" = "您的iOS系统版本过低，不支持分享到该平台";
 

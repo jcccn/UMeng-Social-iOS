@@ -101,30 +101,66 @@ extern NSString *const UMShareToLWTimeline;
 extern NSString *const UMShareToInstagram;
 
 /**
+ 分享到Whatsapp
+ */
+extern NSString *const UMShareToWhatsapp;
+
+/**
+ 分享到Line
+ */
+extern NSString *const UMShareToLine;
+
+/**
+ 分享到Tumblr
+ */
+extern NSString *const UMShareToTumblr;
+
+/**
+ 分享到Pinterest
+ */
+extern NSString *const UMShareToPinterest;
+
+/**
+ 分享到KakaoTalk
+ */
+extern NSString *const UMShareToKakaoTalk;
+
+/**
+ 分享到Flickr
+ */
+extern NSString *const UMShareToFlickr;
+
+/**
  分享平台
  
  */
 typedef enum {
     UMSocialSnsTypeNone = 0,
     UMSocialSnsTypeQzone = 10,
-    UMSocialSnsTypeSina = 11,                 //sina weibo
-    UMSocialSnsTypeTenc = 12,                 //tencent weibo
-    UMSocialSnsTypeRenr = 13,                 //renren
-    UMSocialSnsTypeDouban = 14,               //douban
-    UMSocialSnsTypeEmail = 15,
-    UMSocialSnsTypeSms = 16,
-    UMSocialSnsTypeWechatSession = 17,
-    UMSocialSnsTypeWechatTimeline = 18,
-    UMSocialSnsTypeWechatFavorite = 19,
-    UMSocialSnsTypeMobileQQ = 20,
-    UMSocialSnsTypeFacebook = 21,
-    UMSocialSnsTypeTwitter = 22,
-    UMSocialSnsTypeYiXinSession = 23,
-    UMSocialSnsTypeYiXinTimeline = 24,
-    UMSocialSnsTypeLaiWangSession = 25,
-    UMSocialSnsTypeLaiWangTimeline = 26,
-    UMSocialSnsTypeInstagram = 27,
-    UMSocialSnsTypeNew = 28
+    UMSocialSnsTypeSina,                  //sina weibo
+    UMSocialSnsTypeTenc,                  //tencent weibo
+    UMSocialSnsTypeRenr,                  //renren
+    UMSocialSnsTypeDouban,                //douban
+    UMSocialSnsTypeWechatSession,
+    UMSocialSnsTypeWechatTimeline,
+    UMSocialSnsTypeWechatFavorite,
+    UMSocialSnsTypeEmail,
+    UMSocialSnsTypeSms,
+    UMSocialSnsTypeMobileQQ,
+    UMSocialSnsTypeFacebook,
+    UMSocialSnsTypeTwitter,
+    UMSocialSnsTypeYiXinSession,
+    UMSocialSnsTypeYiXinTimeline,
+    UMSocialSnsTypeLaiWangSession,
+    UMSocialSnsTypeLaiWangTimeline,
+    UMSocialSnsTypeInstagram,
+    UMSocialSnsTypeWhatsApp,
+    UMSocialSnsTypeLine,
+    UMSocialSnsTypeTumblr,
+    UMSocialSnsTypeKakaoTalk,
+    UMSocialSnsTypeFlickr,
+    UMSocialSnsTypePinterest,
+    UMSocialSnsTypeNew
 } UMSocialSnsType;
 
 
@@ -203,6 +239,15 @@ typedef void (^UMSocialSnsPlatformLoginHandler)(UIViewController *presentingCont
  */
 @property(nonatomic, copy) UMSocialSnsPlatformLoginHandler loginClickHandler;
 
+/**
+ 是否需要登录授权
+ */
+@property(nonatomic, assign) BOOL needLogin;
+
+/**
+ 标志是否有webView授权
+ */
+@property(nonatomic, assign) BOOL haveWebViewAuth;
 /**
  初始化方法
  

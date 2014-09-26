@@ -62,6 +62,11 @@
 @property (nonatomic, retain) NSDate *expirationDate;
 
 /**
+ 授权到微信用到的refreshToken
+ */
+@property (nonatomic, copy) NSString *refreshToken;
+
+/**
  初始化方法
  
  @param platformName 微博平台名

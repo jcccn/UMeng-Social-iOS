@@ -107,24 +107,24 @@ extern NSString *const UMShareToInstagram;
 typedef enum {
     UMSocialSnsTypeNone = 0,
     UMSocialSnsTypeQzone = 10,
-    UMSocialSnsTypeSina = 11,                 //sina weibo
-    UMSocialSnsTypeTenc = 12,                 //tencent weibo
-    UMSocialSnsTypeRenr = 13,                 //renren
-    UMSocialSnsTypeDouban = 14,               //douban
-    UMSocialSnsTypeEmail = 15,
-    UMSocialSnsTypeSms = 16,
-    UMSocialSnsTypeWechatSession = 17,
-    UMSocialSnsTypeWechatTimeline = 18,
-    UMSocialSnsTypeWechatFavorite = 19,
-    UMSocialSnsTypeMobileQQ = 20,
-    UMSocialSnsTypeFacebook = 21,
-    UMSocialSnsTypeTwitter = 22,
-    UMSocialSnsTypeYiXinSession = 23,
-    UMSocialSnsTypeYiXinTimeline = 24,
-    UMSocialSnsTypeLaiWangSession = 25,
-    UMSocialSnsTypeLaiWangTimeline = 26,
-    UMSocialSnsTypeInstagram = 27,
-    UMSocialSnsTypeNew = 28
+    UMSocialSnsTypeSina,                  //sina weibo
+    UMSocialSnsTypeTenc,                  //tencent weibo
+    UMSocialSnsTypeRenr,                  //renren
+    UMSocialSnsTypeDouban,                //douban
+    UMSocialSnsTypeWechatSession,
+    UMSocialSnsTypeWechatTimeline,
+    UMSocialSnsTypeWechatFavorite,
+    UMSocialSnsTypeEmail,
+    UMSocialSnsTypeSms,
+    UMSocialSnsTypeMobileQQ,
+    UMSocialSnsTypeFacebook,
+    UMSocialSnsTypeTwitter,
+    UMSocialSnsTypeYiXinSession,
+    UMSocialSnsTypeYiXinTimeline,
+    UMSocialSnsTypeLaiWangSession,
+    UMSocialSnsTypeLaiWangTimeline,
+    UMSocialSnsTypeInstagram,
+    UMSocialSnsTypeNew
 } UMSocialSnsType;
 
 

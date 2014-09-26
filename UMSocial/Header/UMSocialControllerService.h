@@ -14,26 +14,6 @@
 
 @class UMSocialControllerService;
 
-/*
- 自定义的类似iOS6.0中`UIActivityViewController`样式的列表，每个sns平台由对应图片和名称组成。注意：如果你要此控件支持多方向，需要在自己的UIViewController中屏幕旋转的`didRotateFromInterfaceOrientation`调用`UMSocialIconActionSheet`的`setNeedsDisplay`方法，来重新布局。
- */
-@interface UMSocialIconActionSheet : UIView 
-
-
-/**
- 将自己自下往上弹出来
- 
- @param showView 在此父UIView自下往上弹出来的
- */
--(void)showInView:(UIView *)showView;
-
-/**
- 将自己移除
- 
- */
--(void)dismiss;
-@end
-
 /**
  `UMSocialControllerService`对象用到的一些回调方法，包括分享完成、授权完成、评论完成等事件，和关闭授权页面、分享页面、评论页面等事件。
  */
@@ -205,7 +185,7 @@
  
  @return 分享列表页面
  */
-- (UMSocialIconActionSheet *)getSocialIconActionSheetInController:(UIViewController *)controller;
+- (id)getSocialIconActionSheetInController:(UIViewController *)controller;
 
 /**
 获取各种页面的`UIViewController`对象

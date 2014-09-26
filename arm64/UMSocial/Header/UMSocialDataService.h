@@ -52,7 +52,8 @@ typedef enum {
     UMSResponseAddSnsAccount          = 15,         //添加已经授权的账户
     UMSResponseGetAppInfo             = 16,         //获取各个sns绑定app 信息
     UMSResponseIsTokenValid           = 17,         //获取各个微博平台的token是否有效
-    UMSResponseAnalytics              = 18
+    UMSResponseAnalytics              = 18,
+    UMSResponseAddAppInfo             = 19
 } UMSResponse;
 
 /**

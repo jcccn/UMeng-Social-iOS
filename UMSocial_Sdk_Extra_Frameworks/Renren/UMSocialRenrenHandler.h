@@ -17,7 +17,7 @@
 /**
  设置人人网AppId，apiKey，secreteKey等用于SSO授权
  
- @param appId 
+ @param app_Id 
  @param apiKey
  @param secretKey 
  */
