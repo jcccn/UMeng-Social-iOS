@@ -231,6 +231,19 @@ typedef void (^UMTableViewCellConfig)(UITableViewCell *cell,UMSViewControllerTyp
  */
 + (void)setShouldCommentWithLocation:(BOOL)shouldCommentWithLocation;
 
+/** Deprecated API, Use [UMSocialConfig showPlatformWhenNotInstall:nil];
+ 显示所有平台，某些平台例如微信和QQ，需要安装客户端才能分享，若没有安装客户端情况下不显示这些平台
+ 
+ */
+//+ (void)showAllPlatform:(BOOL)showAllPlatform;
+
+/**
+ 指定显示没有安装客户端的平台，默认需要客户端的分享平台不显示。
+ 传nil则显示所有平台。
+ 
+ */
++ (void)showNotInstallPlatforms:(NSArray *)showPlatforms;
+
 + (UMSocialConfig *)shareInstance;
 
 /** deprecated API, Use ''[UMSocialSinaHandler openSSOWithRedirectURL:@"http://sns.whalecloud.com/sina2/callback"];''

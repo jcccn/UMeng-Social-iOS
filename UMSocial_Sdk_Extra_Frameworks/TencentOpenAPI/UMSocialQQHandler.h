@@ -24,7 +24,7 @@
 +(void)setQQWithAppId:(NSString *)app_Id appKey:(NSString *)appKey url:(NSString *)url;
 
 /**
- 设置在没有安装QQ客户端的情况下，是否支持单独授权到QQ互联
+ 设置在没有安装QQ客户端的情况下，是否支持授权到QQ空间（此方法设置只打开QQ空间单独授权的方法，不包含分享前的授权）
  
  @param supportWebView 是否支持没有安装QQ客户端的情况下，是否支持单独授权
  */

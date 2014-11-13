@@ -381,7 +381,7 @@ typedef enum {
 /**
  分享URL地址
  */
-@property (nonatomic, copy) NSString *urlString;
+@property (nonatomic, copy) NSString *url;
 
 @end
 
@@ -471,6 +471,12 @@ typedef enum {
  
  */
 @interface UMSocialExtConfig : NSObject
+
+/**
+ 以各个分享平台名为key，各个品台data为value
+ 
+ */
+@property (nonatomic, retain) NSDictionary *snsDataDictionary;
 
 /**
  分享到新浪微博内容

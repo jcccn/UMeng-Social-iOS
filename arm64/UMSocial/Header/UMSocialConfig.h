@@ -231,6 +231,19 @@ typedef void (^UMTableViewCellConfig)(UITableViewCell *cell,UMSViewControllerTyp
  */
 + (void)setShouldCommentWithLocation:(BOOL)shouldCommentWithLocation;
 
+/** Deprecated API, Use [UMSocialConfig showPlatformWhenNotInstall:nil];
+ 显示所有平台，某些平台例如微信和QQ，需要安装客户端才能分享，若没有安装客户端情况下不显示这些平台
+ 
+ */
+//+ (void)showAllPlatform:(BOOL)showAllPlatform;
+
+/**
+ 指定显示没有安装客户端的平台，默认需要客户端的分享平台不显示。
+ 传nil则显示所有平台。
+ 
+ */
++ (void)showNotInstallPlatforms:(NSArray *)showPlatforms;
+
 + (UMSocialConfig *)shareInstance;
 
 /** deprecated API, Use ''[UMSocialSinaHandler openSSOWithRedirectURL:@"http://sns.whalecloud.com/sina2/callback"];''
@@ -246,14 +259,14 @@ typedef void (^UMTableViewCellConfig)(UITableViewCell *cell,UMSViewControllerTyp
 
 /** deprecated API, Use ''[UMSocialQQHandler shareToQQWithAppId:@"100424468" url:@"http://www.umeng.com/social"];''
 
- 设置手机QQ的appId和微信图文分享用到的url地址
+ 设置手机QQ的app_Id和微信图文分享用到的url地址
  
- @param appId 手机QQ的AppId
+ @param app_Id 手机QQ的AppId
  @param url   手机QQ图文分享web类型，用到的url地址，如果传nil，默认使用http://www.umeng.com/social
  @param classes 载入QQ互联 SDK，用到的两个类
  */
 
-//+ (void)setQQAppId:(NSString *)appId url:(NSString *)url importClasses:(NSArray *)classes;
+//+ (void)setQQAppId:(NSString *)app_Id url:(NSString *)url importClasses:(NSArray *)classes;
 
 
 /**deprecated API, Use ''[UMSocialQQHandler setSupportQzoneSSO:YES];''

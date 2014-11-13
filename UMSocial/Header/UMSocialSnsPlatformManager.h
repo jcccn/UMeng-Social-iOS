@@ -101,6 +101,36 @@ extern NSString *const UMShareToLWTimeline;
 extern NSString *const UMShareToInstagram;
 
 /**
+ 分享到Whatsapp
+ */
+extern NSString *const UMShareToWhatsapp;
+
+/**
+ 分享到Line
+ */
+extern NSString *const UMShareToLine;
+
+/**
+ 分享到Tumblr
+ */
+extern NSString *const UMShareToTumblr;
+
+/**
+ 分享到Pinterest
+ */
+extern NSString *const UMShareToPinterest;
+
+/**
+ 分享到KakaoTalk
+ */
+extern NSString *const UMShareToKakaoTalk;
+
+/**
+ 分享到Flickr
+ */
+extern NSString *const UMShareToFlickr;
+
+/**
  分享平台
  
  */
@@ -124,6 +154,12 @@ typedef enum {
     UMSocialSnsTypeLaiWangSession,
     UMSocialSnsTypeLaiWangTimeline,
     UMSocialSnsTypeInstagram,
+    UMSocialSnsTypeWhatsApp,
+    UMSocialSnsTypeLine,
+    UMSocialSnsTypeTumblr,
+    UMSocialSnsTypeKakaoTalk,
+    UMSocialSnsTypeFlickr,
+    UMSocialSnsTypePinterest,
     UMSocialSnsTypeNew
 } UMSocialSnsType;
 

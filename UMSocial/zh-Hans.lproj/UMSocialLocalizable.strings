@@ -7,6 +7,7 @@
 */
 "button_cancel" = "取消";
 "button_ok" = "确定";
+"button_start" = "开启";
 
 "button_close" = "关闭";
 "button_back" = "返回";
@@ -26,7 +27,7 @@
 "shareQQ_error" = "抱歉";
 "shareQQ_notInstall" = "没有安装手机QQ客户端";
 "shareQQ_openFail" = "打开手机QQ失败";
-
+"shareClient_notInstall" = "没有安装客户端";
 "shareInstagram_openFail" = "没有安装Instagram客户端";
 
 "shareList_title" = "分享至";
